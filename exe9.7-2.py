@@ -24,7 +24,7 @@ for line in fhand:
 
     line = line.lower()
     words = line.split()
-    if line.startswith('from '):
+    if line.startswith('from  '):
         if len(words) >= 3:
             counts[words[2]] = counts.get(words[2], 0) + 1
         else:
