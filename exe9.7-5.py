@@ -10,11 +10,11 @@ import string
 
     # filename : mbox-short.txt
 
-def make_trans(counts):
+"""def make_trans(counts):
     x = "@"
     y = " "
     email = str.maketrans(x, y)
-    return counts.maketrans(email)
+    return counts.maketrans(email)"""
 
 fname = input('Podaj nazwę pliku :')
 try:
