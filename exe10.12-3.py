@@ -14,11 +14,13 @@ except :
 counts = dict()
 for line in fhand:
     line = line.lower()
+    line = line.strip()
     line = line.translate(str.maketrans('', '', string.punctuation))
-    words = line.split()
+    line_no_dig = line.translate(str.maketrans('', '', string.digits))
+    words = line_no_dig.split()
     # print(type(words)) #list
     # print(type(line))  #string
-    words[:] = line
+    words[:] = line_no_dig
 
     for word in words:
         if word not in counts:
@@ -27,7 +29,7 @@ for line in fhand:
             counts[word] += 1
 
 
-characters = [ (k, v) for k, v in counts.items()]
+characters = [ (v, k) for k, v in counts.items()]
 
 characters.sort()
 
