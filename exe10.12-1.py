@@ -37,7 +37,6 @@ num_of_mails = list()
 for key, val in counts.items():
     num_of_mails.append((val, key))
 num_of_mails.sort(reverse=True)
-print(num_of_mails)
 
 for key, val in num_of_mails[:1]:
     print(key, val)
